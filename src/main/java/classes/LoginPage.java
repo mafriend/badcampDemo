@@ -7,6 +7,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LoginPage {
 
+    private WebDriver driver;
+    private Object currentPage;
+
+    public void startDriver() {
+        driver = new ChromeDriver();
+    }
+
     public static void visitUmamiSite() {
         WebDriver driver = new ChromeDriver();
         driver.get("http://127.0.0.1:8888/");
