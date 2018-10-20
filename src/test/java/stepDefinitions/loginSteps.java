@@ -13,21 +13,13 @@ public class loginSteps {
         LoginPage.locateUmamiLogo();
     }
 
-    @And("^a user is logged in$")
-    public void a_user_is_logged_in() throws Exception {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    @And("^clicks the log in button$")
+    public void clicksTheLogInButton() throws Throwable {
+        LoginPage.clickLoginButton();
     }
 
-    @When("^the user clicks the log out button$")
-    public void the_user_clicks_the_log_out_button() throws Exception {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-
-    @Then("^the user will be logged out$")
-    public void the_user_will_be_logged_out() throws Exception {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    @When("^the user enters \"([^\"]*)\" in the username field$")
+    public void theUserEntersInTheUsernameField(String arg0) throws Throwable {
+        LoginPage.enterUsername();
     }
 }
