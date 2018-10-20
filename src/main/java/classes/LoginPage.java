@@ -8,9 +8,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class LoginPage {
 
     private static WebDriver driver;
-    private Object currentPage;
+//    private Object currentPage;
 
-    public void startDriver() {
+    public static void startDriver() {
         driver = new ChromeDriver();
     }
 
@@ -27,8 +27,22 @@ public class LoginPage {
         loginButton.click();
     }
 
-    public static void enterUsername() {
+    public static void enterUsername(String username) {
+        //Click to focus on field
         WebElement usernameField = ((ChromeDriver) driver).findElementById("id='edit-name'");
         usernameField.click();
+        //Enter username "admin"
+    }
+
+    public static void enterPassword(String password) {
+    }
+
+    public static void clickSubmitLoginButton() {
+
+    }
+
+    public static boolean isLogoutButtonVisible() {
+        if (driver.findElement()){
+        }
     }
 }
