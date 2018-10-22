@@ -4,12 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-//import static org.assertj.core.api.Assertions.*;
 
 public class LoginPage {
 
     private static WebDriver driver;
-//    private Object currentPage;
 
     public static void startDriver() {
         driver = new ChromeDriver();
@@ -48,25 +46,6 @@ public class LoginPage {
             return false;
         }
     }
-
-    public static void findLogoutButton() {
-        driver.findElement(By.cssSelector("a[href='/user/logout']"));
-    }
-
-//    public static boolean findLogoutButton() {
-//        driver.findElement(By.cssSelector("a[href='/user/logout']")).isDisplayed();
-//        Assert.assertTrue((isElementPresent(By.id("idOfElement")));
-//    }
-
-//    public boolean isLogoutButtonPresent(By by) {
-//        try {
-//            driver.findElement(By.cssSelector("a[href='/user/logout']"));
-//        return true;
-//        }
-//        catch (org.openqa.selenium.NoSuchElementException e) {
-//            return false;
-//        }
-//    }
 
     public static void stopDriver() {
         driver.quit();
