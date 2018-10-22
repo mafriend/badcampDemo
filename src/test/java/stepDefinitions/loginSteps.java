@@ -13,11 +13,11 @@ public class loginSteps {
     public void a_user_is_on_the_umami_website() throws Exception {
         LoginPage.startDriver();
         LoginPage.visitUmamiSite();
-        LoginPage.locateUmamiLogo();
+        LoginPage.locateDrupalLogo();
     }
 
-    @And("^clicks the log in button$")
-    public void clicksTheLogInButton() throws Throwable {
+    @And("^clicks the Log In button$")
+    public void clicks_the_Log_In_button() throws Exception {
         LoginPage.clickLoginButton();
     }
 
@@ -26,7 +26,7 @@ public class loginSteps {
         LoginPage.enterUsername(username);
     }
 
-    @And("^the user enters <\"([^\"]*)\"> in the password field$")
+    @And("^the user enters \"([^\"]*)\" in the password field$")
     public void theUserEntersInThePasswordField(String password) throws Throwable {
         LoginPage.enterPassword(password);
     }
@@ -38,6 +38,7 @@ public class loginSteps {
 
     @Then("^the user will be logged in$")
     public void theUserWillBeLoggedIn() throws Throwable {
-        Assert.assertEquals(true, LoginPage.isLogoutButtonVisible());
+        //LoginPage.isLogoutButtonPresent();
+        //LoginPage.stopDriver();
     }
 }
