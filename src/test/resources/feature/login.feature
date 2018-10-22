@@ -1,5 +1,5 @@
 Feature: User Sessions
-  A user should be able to log in and log out of the umami drupal site
+  A user should be able to log in and log out of the drupal site
 
   Scenario: User can log in
     Given a user is on my drupal website
