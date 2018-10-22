@@ -2,7 +2,7 @@ Feature: User Sessions
   A user should be able to log in and log out of the umami drupal site
 
   Scenario: User can log in
-    Given a user is on the umami website
+    Given a user is on my drupal website
     And clicks the Log In button
     When the user enters "mfriend" in the username field
     And the user enters "badcamp1" in the password field

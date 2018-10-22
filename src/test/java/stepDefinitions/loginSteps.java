@@ -8,10 +8,10 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 
 public class loginSteps {
-    @Given("^a user is on the umami website$")
-    public void a_user_is_on_the_umami_website() throws Exception {
+    @Given("^a user is on my drupal website$")
+    public void a_user_is_on_my_drupal_website() throws Exception {
         LoginPage.startDriver();
-        LoginPage.visitUmamiSite();
+        LoginPage.visitMyDrupalSite();
         LoginPage.locateDrupalLogo();
     }
 

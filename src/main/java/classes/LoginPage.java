@@ -13,7 +13,7 @@ public class LoginPage {
         driver = new ChromeDriver();
     }
 
-    public static void visitUmamiSite() {
+    public static void visitMyDrupalSite() {
         driver.get("http://badcampdemo.ddev.local/");
     }
 
