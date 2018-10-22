@@ -5,6 +5,8 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import static org.assertj.core.api.Assertions.*;
+
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
@@ -38,7 +40,7 @@ public class loginSteps {
 
     @Then("^the user will be logged in$")
     public void theUserWillBeLoggedIn() throws Throwable {
-        //LoginPage.isLogoutButtonPresent();
-        //LoginPage.stopDriver();
+        Assert.assertFalse("Logout button is not visible!", LoginPage.isLogoutButtonPresent());
+        LoginPage.stopDriver();
     }
 }

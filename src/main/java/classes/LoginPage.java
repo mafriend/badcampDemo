@@ -4,8 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-//import sun.jvm.hotspot.utilities.Assert;
-//
+//import static org.assertj.core.api.Assertions.*;
+
 public class LoginPage {
 
     private static WebDriver driver;
@@ -41,9 +41,17 @@ public class LoginPage {
         driver.findElement(By.id("edit-submit")).click();
     }
 
-//    public static boolean isLogoutButtonPresent() {
-//        return Assert.assertTrue(driver.findElement(By.cssSelector("a[href='/user/logout']")));
-//    }
+    public static boolean isLogoutButtonPresent() {
+        if (driver.findElement(By.cssSelector("a[href='/user/logout']")).isDisplayed()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static void findLogoutButton() {
+        driver.findElement(By.cssSelector("a[href='/user/logout']"));
+    }
 
 //    public static boolean findLogoutButton() {
 //        driver.findElement(By.cssSelector("a[href='/user/logout']")).isDisplayed();
