@@ -39,8 +39,8 @@ public class LoginPage {
         driver.findElement(By.id("edit-submit")).click();
     }
 
-    public static boolean isLogoutButtonPresent() {
-        if (driver.findElement(By.cssSelector("a[href='/user/logout']")).isDisplayed()) {
+    public static boolean isAdminNavBarPresent() {
+        if (driver.findElement(By.id("toolbar-bar")).isDisplayed()) {
             return true;
         } else {
             return false;

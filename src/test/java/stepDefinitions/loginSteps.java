@@ -37,7 +37,7 @@ public class loginSteps {
 
     @Then("^the user will be logged in$")
     public void theUserWillBeLoggedIn() throws Throwable {
-        Assert.assertFalse("Logout button is not visible!", LoginPage.isLogoutButtonPresent());
+        Assert.assertTrue("Nav bar is not visible, user is not logged in!", LoginPage.isAdminNavBarPresent());
         LoginPage.stopDriver();
     }
 }
